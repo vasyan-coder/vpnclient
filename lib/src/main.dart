@@ -49,20 +49,20 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+            Text(
+              'Никитин В.В.',
+              style: Theme.of(context).textTheme.displayMedium,
             ),
             Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+              '21И0546',
+              style: Theme.of(context).textTheme.displayMedium,
+            ),
+            Text(
+              'ИКБО-07-21',
+              style: Theme.of(context).textTheme.displayMedium,
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ),
     );
   }
