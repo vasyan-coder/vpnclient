@@ -21,11 +21,13 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
+                Navigator.pushNamed(context, '/main');
               },
               child: const Text("Далее"),
             ),
             TextButton(
               onPressed: () {
+                Navigator.pushNamed(context, '/registration');
               },
               child: const Text("Еще нет аккаунта? Регистрация"),
             ),

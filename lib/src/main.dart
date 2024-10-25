@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vpnclient/src/screens/config.dart';
 import 'package:vpnclient/src/screens/login.dart';
+import 'package:vpnclient/src/screens/mainscreen.dart';
 import 'package:vpnclient/src/screens/profile.dart';
 import 'package:vpnclient/src/screens/registration.dart';
 import 'package:vpnclient/src/screens/vpnmain.dart';
@@ -15,12 +16,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'VPN Client',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        primarySwatch: Colors.blue,
       ),
-      home: ProfileScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const LoginScreen(),
+        '/registration': (context) => const RegistrationScreen(),
+        '/main': (context) =>  const MainScreen(),
+        '/config': (context) => ConfigListScreen(),
+        '/profile': (context) => const ProfileScreen(),
+      },
     );
-  }
-}
+  }}
