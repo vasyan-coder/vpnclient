@@ -13,7 +13,7 @@ class _MainScreenState extends State<MainScreen> {
   final List<Widget> _screens = [
     const MainVpnScreen(),
     ConfigListScreen(),
-    const ProfileScreen(),
+    ProfileScreen(),
   ];
   @override
   Widget build(BuildContext context) {
